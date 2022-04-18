@@ -18,7 +18,9 @@
   },
   "homepage": "https://github.com/duong-doan/node_server#readme",
   "dependencies": {
-    "express": "^4.17.3"
+    "axios": "^0.26.1",
+    "express": "^4.17.3",
+    "mongoose": "^6.3.0"
   },
   "devDependencies": {
     "morgan": "^1.10.0",

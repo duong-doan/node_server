@@ -3,6 +3,9 @@ const express = require("express");
 const app = express();
 const port = 4000;
 const routes = require("./src/routes");
+const db = require("./src/data/db");
+
+db.connect();
 
 app.use(
   express.urlencoded({
@@ -11,10 +14,12 @@ app.use(
 );
 app.use(express.json());
 
+// mongoose
+
 // app.use(morgan("combined"));
 
 routes(app);
 
 app.listen(port, () => {
-  console.log(`Example app listening on port ${port}`);
+  console.log(`app listening on port ${port}`);
 });
